@@ -5,8 +5,9 @@
 :root {
     --main-color: #0077b6;
     --accent-color: #47336d;
-    --bg-color: #f0f0f0;
-    --text-color: #000000;
+    --bg-color: #F5F5F5;
+    --text-color: #131213;
+    --ftrhdr-color: #1d2834;
 }
 
 /* Basic reset and font styles */
@@ -20,12 +21,15 @@ h4 {
 /* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 1rem;
-    backdrop-filter: blur(10px);
     color: var(--main-color);
     box-shadow: 2px 0 10px rgba(0,0,0,0.9);
+    background-image: url(/FCUDarwin/photos/patirn.jpg);
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
 }
 
 .social-media {
@@ -33,10 +37,13 @@ h4 {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    text-decoration: none;
   
   }
   
-  
+html{
+  scroll-behavior: smooth;
+}
   .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -47,7 +54,7 @@ h4 {
     border: .13rem solid var(--main-color); /* Adjust border thickness */
     border-radius: 50%;
     font-size: 1.3rem; /* Adjust font size */
-    color: black;
+    color: var(--bg-color);
     margin-top: .5rem;
     margin-right: 2rem; /* Adjust margin-right for space between icons */
     transition: all 0.3s ease;
@@ -74,19 +81,19 @@ h4 {
 
   }
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 800;
     display: flex;
     justify-content: center;
-    align-items: right;
-    margin-right: 1.2rem;
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 
 nav ul {
     display: flex;
+    align-items: left;
     list-style: none;
     padding: 0;
+    margin-left: 1rem;
 }
 
 nav ul li {
@@ -96,36 +103,46 @@ nav ul li {
 nav a {
     text-decoration: none;
     background-color: none;
-    color: #0077b6;
+    color: var(--main-color);
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #0077b6;
+    border: 1px solid var(--main-color);
     font-weight: 800;
 }
 
 nav a:hover {
-    background-color: #0087cb;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--bg-color);
     border-radius: 10px;
     transition: background-color 0.315s ease-in-out;
 }
 
 h6{
     font-weight: 500;
+    color: var(--bg-color);
 }
 .batchyear, .classof {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
-    color: #000000;
+    color: var(--bg-color);
 }
 
+.info{
+  color: var(--bg-color);
+  font-size: 0.84rem;
+  margin-left: 2rem;
+}
+
+.asterisk{
+  color: red;
+}
 /* Gallery styles */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .student {
@@ -137,27 +154,35 @@ h6{
 }
 
 .student img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Change opacity to 1 initially */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  cursor:pointer;
+  
+}
+
+.student img:hover {
+  transform:scale(1.1) ;
 }
 
 .student .name {
     margin-top: 5px;
     font-size: 14px;
+    color: var(--bg-color);
 }
 
-.student img:hover {
-    transform: scale(1.05);
-}
+
 
 /* Footer styles */
 footer {
-    backdrop-filter: blur(10px);
-    color: #000000;
+  background-image: url(/FCUDarwin/photos/patirn.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
     text-align: center;
     padding: 0.3rem;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.9);
@@ -176,15 +201,16 @@ footer {
 }
 
 
-
+.darwinlink{
+  text-decoration:none;
+}
 
 
 body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.7;
   margin: 0;
   padding: 0;
-  background-image: url('/FCUDarwin/photos/patirn.jpg');
+  background-color: var(--text-color);
   background-size: cover;
   font-family: "Poppins", sans-serif;
 }
@@ -303,6 +329,7 @@ body {
     margin-bottom: 20px;
     max-width: 40rem;
     text-align: justify;
+    color: var(--bg-color);
  
 
   }
@@ -349,7 +376,7 @@ body {
 
 .sidebar-content {
     padding: 20px;
-    color: #1a1641;
+    color: var(--bg-color);
 }
 
 .sidebar.open {
@@ -447,3 +474,84 @@ p{
   z-index: 1001;
 }
 
+
+.student img.show {
+  animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.about-img {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.3s ease-out, opacity 1.3s ease-out;
+}
+
+.about-content {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1.3s ease-out, opacity 1.3s ease-out;
+}
+
+.about-img.show {
+  animation: slideInFromLeft 1.3s forwards;
+}
+
+.about-content.show {
+  animation: slideInFromRight 1.3s forwards;
+}
+
+
+/* Add animation styles for the contact section */
+#contact.animate-contact {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Keyframes for the contact animation */
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Add styles to highlight social media icons */
+.social-media .highlight-social-media {
+  transform: scale(1.1); /* Scale the icon on hover */
+  outline: none;
+  color: var(--bg-color);
+  z-index: 999;
+  box-shadow: 0 0 4rem var(--main-color); /* Add a subtle shadow on hover */
+}
