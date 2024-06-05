@@ -1,0 +1,449 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+
+:root {
+    --main-color: #0077b6;
+    --accent-color: #47336d;
+    --bg-color: #f0f0f0;
+    --text-color: #000000;
+}
+
+/* Basic reset and font styles */
+
+
+
+h4 {
+    text-align: center;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    color: var(--main-color);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.9);
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+  }
+  
+  
+  .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.7rem; /* Adjust width */
+    height: 2.7rem; /* Adjust height */
+    background: transparent;
+    border: .13rem solid var(--main-color); /* Adjust border thickness */
+    border-radius: 50%;
+    font-size: 1.3rem; /* Adjust font size */
+    color: black;
+    margin-top: .5rem;
+    margin-right: 2rem; /* Adjust margin-right for space between icons */
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+  }
+  
+  .social-media a:hover {
+    transform: scale(1.1); /* Scale the icon on hover */
+    box-shadow: 0 0 1.2rem var(--main-color); /* Add a subtle shadow on hover */
+    outline: none;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    z-index: 999;
+    
+  }
+  
+  .social-media a:focus {
+    outline: none; /* Remove the outline on focus */
+  }
+  
+  .social-media a:last-child {
+    margin-right: 0; /* Remove margin for the last icon */
+
+  }
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    margin-right: 1.2rem;
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: none;
+    color: #0077b6;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #0077b6;
+    font-weight: 800;
+}
+
+nav a:hover {
+    background-color: #0087cb;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.315s ease-in-out;
+}
+
+h6{
+    font-weight: 500;
+}
+.batchyear, .classof {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0.6rem;
+}
+
+.student img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.student .name {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.student img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    backdrop-filter: blur(10px);
+    color: #000000;
+    text-align: center;
+    padding: 0.3rem;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content a {
+    color: var(--bg-color);
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
+
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background-image: url('/FCUDarwin/photos/patirn.jpg');
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+  
+ /* Existing CSS styles... */
+
+.about1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: var(--text-color);
+  }
+  
+  /* Add a media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .about1 {
+      flex-direction: column; /* Change flex direction to column */
+    }
+  
+    .about-img {
+      margin-right: 0;
+      margin-bottom: 20px; /* Adjust margin-bottom to create space between image and text */
+    }
+  
+    .about-content {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+  
+  .about-img {
+    text-align: center;
+  }
+  
+  .about-img img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--main-color);
+    border-radius: 100%;
+  }
+  
+  /* Existing CSS styles... */
+  
+  
+  .about1:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  
+  .about-img {
+    flex-basis: 40%;
+    text-align: center;
+  }
+
+  .about-img img{
+    width: 30rem;
+    margin-top: 4rem;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+
+  }
+  
+  .about-img {
+    flex-basis: 40%;
+    text-align: center;
+    margin: 0 5vw 0 5vw;
+  }
+  
+  .about-img .img-container {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .about-img .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  
+  
+  .about-content {
+    margin-right: 5vw;
+    margin-left: 5vw;
+
+    
+  }
+  
+  .about-content h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 40rem;
+    text-align: justify;
+ 
+
+  }
+  
+  .about-content em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+  
+  .about-content strong {
+    font-weight: 700;
+    color: var(--main-color);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--main-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    transform: scale(0.9);
+  }
+  
+  .btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    border: 1.8px solid var(--main-color);
+  }
+
+  .sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.5s ease;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+}
+
+.sidebar-content {
+    padding: 20px;
+    color: #1a1641;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+
+button a:hover{
+    transform: scale(1.1); /* Scale the icon on hover */
+    box-shadow: 0 0 1.2rem var(--main-color); /* Add a subtle shadow on hover */
+    outline: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    z-index: 999;
+}
+
+p{
+  font-size: 1.748vh;
+}
+
+.honors{
+  font-size: 1rem;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar .sidebar-content h2 {
+    margin-top: 50px;
+    font-weight: bold;
+
+}
+
+.sidebar .sidebar-content p,
+.sidebar .sidebar-content ul {
+    margin-bottom: 10px;
+}
+
+.sidebar .sidebar-content ul {
+    padding-left: 2vw;
+}
+
+.sidebar .sidebar-content ul li {
+    list-style-type: disc;
+}
+
+
+
+#graduateFacebook .facebook-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--bg-color);
+    font-size: 1rem;
+    display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem; /* Adjust width */
+  height: 2rem; /* Adjust height */
+  background: transparent;
+  border: .13rem solid var(--main-color); /* Adjust border thickness */
+  border-radius: 50%;
+  font-size: 1.3rem; /* Adjust font size */
+  color: var(--main-color);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+#graduateFacebook .facebook-link:hover {
+    color: var(--main-color);
+}
+
+#graduateFacebook .facebook-link i {
+    font-size: 1.2rem;
+}
+
+#graduateFacebook {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.btn {
+  top: 10px;
+  right: 10px;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Adjusted to move the button to the upper right corner */
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--main-color);
+  z-index: 1001;
+}
+
