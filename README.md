@@ -9,7 +9,7 @@ Welcome to the Darwin Section Grade 12 STEM Alumni Website! This website is dedi
 
 ## How to Use
 
-1. Visit the [Darwin Section Grade 12 STEM Alumni Website](#) hosted at [https://fcu-darwin1223-24.vercel.app/index.html](#).
+1. Visit the [Darwin Section Grade 12 STEM Alumni Website](https://fcu-darwin1223-24.vercel.app/index.html) hosted at [Darwin's Memoir: Class of '24](https://fcu-darwin1223-24.vercel.app/index.html).
 2. Navigate to the "Gallery" section to view the graduation photos.
 3. Click on your graduation photo to reveal the sidebar showcasing your achievements.
 
