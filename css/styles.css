@@ -213,6 +213,7 @@ body {
   background-color: var(--text-color);
   background-size: cover;
   font-family: "Poppins", sans-serif;
+
 }
 
   
@@ -321,6 +322,7 @@ body {
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 15px;
+    color: var(--bg-color);
   }
   
   .about-content p {
@@ -555,3 +557,42 @@ p{
   z-index: 999;
   box-shadow: 0 0 4rem var(--main-color); /* Add a subtle shadow on hover */
 }
+
+/* INfinite Scroll */
+.marquee-container {
+  max-width: 100%;
+  height: 16rem; /* Adjust the height as needed */
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Optional: background color */
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 300s linear infinite;
+}
+
+.item {
+  height: 100%; /* Make sure items fill the container height */
+}
+
+.item img {
+  height: 100%; /* Ensure images fit within the item div */
+  width: auto; /* Maintain the aspect ratio */
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+/* GALLERY SECTION */
+
+
