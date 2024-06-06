@@ -81,11 +81,13 @@ html{
 
   }
 .navbar-brand {
-    font-size: 4rem;
     font-weight: 800;
     display: flex;
     justify-content: center;
     color: var(--main-color);
+    font-size: clamp(1rem, 2.5vw + 1rem, 3rem); /* Adjust the font-size */
+  font-weight: bold;
+  margin-bottom: clamp(0.5rem, 1vw + 0.5rem, 1.5rem); /* Adjust margin as needed */
 }
 
 nav ul {
@@ -96,8 +98,27 @@ nav ul {
     justify-content: space-between;
 }
 
-nav ul li {
-    margin-right: 20px;
+.navbar ul li a {
+  font-size: clamp(0.8rem, 2vw, 1.2rem); /* Set a range of font sizes */
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar ul li a {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar ul li a {
+      font-size: 0.8rem; /* Further adjust font size for even smaller screens */
+  }
+}
+  @media screen and (max-width: 377px) {
+    .navbar ul li a {
+        font-size: 0.6rem; /* Further adjust font size for even smaller screens */
+    }
 }
 
 nav a {
@@ -117,15 +138,17 @@ nav a:hover {
     transition: background-color 0.315s ease-in-out;
 }
 
+
 h6{
     font-weight: 500;
     color: var(--bg-color);
 }
-.batchyear, .classof {
-    font-size: 1.5rem;
+.batchyear, .classof{
     font-weight: 600;
     text-align: center;
     color: var(--bg-color);
+    font-size: clamp(0.75rem, 1.5vw + 0.5rem, 1.5rem); /* Adjust the font-size */
+  margin-bottom: clamp(0.25rem, 0.5vw + 0.25rem, 1rem); /* Adjust margin as needed */
 }
 
 .info{
@@ -349,19 +372,19 @@ body {
   
   .btn {
     display: inline-block;
-    padding: 10px 30px;
+    padding: 7px 20px;
     background: var(--main-color);
     color: var(--text-color);
     text-decoration: none;
     border-radius: 30px;
-    transition: 0.3s;
+    transition: 0.8s;
     transform: scale(0.9);
+    font-family: Poppins, sans-serif;
   }
   
   .btn:hover {
     background: transparent;
-    color: var(--main-color);
-    border: 1.8px solid var(--main-color);
+    transform: scale(1.1);
   }
 
   .sidebar {
@@ -386,13 +409,23 @@ body {
 }
 
 
-button a:hover{
-    transform: scale(1.1); /* Scale the icon on hover */
-    box-shadow: 0 0 1.2rem var(--main-color); /* Add a subtle shadow on hover */
-    outline: none;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    z-index: 999;
+button:hover::before {
+  filter: blur(10px);
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #21db1abb, #f441a5, #ffeb3b, #fbff01b2);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 0.8s;
+  
 }
 
 p{
@@ -469,11 +502,12 @@ p{
 .sidebar-close {
   position: absolute;
   top: 10px;
-  right: 10px; /* Adjusted to move the button to the upper right corner */
+  right: 10px; 
   cursor: pointer;
   font-size: 2rem;
   color: var(--main-color);
   z-index: 1001;
+  font-family: Poppins, sans-serif;
 }
 
 

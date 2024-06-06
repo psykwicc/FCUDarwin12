@@ -1,14 +1,3 @@
-// Add click event listener to each gallery item
-document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', event => {
-        // Get the clicked image source
-        const imgSrc = event.currentTarget.querySelector('img').getAttribute('src');
-        // Set the modal image source to the clicked image source
-        document.getElementById('full-image').setAttribute('src', imgSrc);
-        // Show the modal
-        document.getElementById('image-viewer').style.display = 'block';
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     // Select all gallery items
@@ -28,4 +17,3 @@ document.addEventListener("DOMContentLoaded", function() {
         delay += 150; // Adjust the delay as needed for a staggered effect
     });
 });
-
