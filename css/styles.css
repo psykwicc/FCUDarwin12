@@ -21,8 +21,8 @@ h4 {
 /* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     color: var(--main-color);
     box-shadow: 2px 0 10px rgba(0,0,0,0.9);
@@ -90,10 +90,10 @@ html{
 
 nav ul {
     display: flex;
-    align-items: left;
+    align-items: center;
     list-style: none;
     padding: 0;
-    margin-left: 1rem;
+    justify-content: space-between;
 }
 
 nav ul li {
