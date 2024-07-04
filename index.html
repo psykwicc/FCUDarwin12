@@ -33,6 +33,12 @@
     }
   }
 
+  @media (max-width: 380px) {
+    .trauma{
+      font-size: 1.12rem;
+    }
+  }
+
   /* For very small devices */
   @media (max-width: 320px) {
     h2 {
@@ -42,6 +48,7 @@
       article { display: block; text-align: left; max-width: 650px; margin: 0 auto; font-family: Poppins, sans-serif; font-size: clamp(16px, 3vw, 24px);}
       a { color: #dc8100; text-decoration: none;}
       a:hover { color: #1fc242; text-decoration: none;}
+      .trauma{display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
     </style>
   </head>
   <body backgrgcolor="#2e2929">
@@ -52,11 +59,35 @@
             <p>&mdash; The Team</p>
             
         </div>
-      
+        <div class="trauma">
+          <p class="day"></p>
+          <p class="hour"></p>
+          <p class="minute"></p>
+          <p class="second"></p>
+      </div>
+      </article>
   </body>
   <script>
     function openEmail() {
         window.location.href = "mailto:flores.charlesadrian@protonmail.com?subject=Inquiry%20about%20Darwins%20Memoir&body=Hi%20there%2C%0D%0A%0D%0AI%20visited%20your%20website%20and%20had%20a%20few%20questions%3A%0D%0A%0D%0A1.%20QUESTION%20%231%0D%0A2.%20QUESTION%20%232%0D%0A3.%20QUESTION%20%233%0D%0A%0D%0ABest%20regards%2C%0D%0A";
     }
-    </script>
+      const countDown = () => {
+          const countDay = new Date('Junw 25, 2024 12:00:00');
+          const now = new Date();
+          const counter = countDay - now;
+          const second = 1000;
+          const minute = second * 60;
+          const hour = minute * 60;
+          const day = hour * 24;
+          const textDay = Math.floor(counter / day);
+          const textHour = Math.floor((counter % day) / hour);
+          const textMinute = Math.floor((counter % hour) / minute);
+          const textSecond = Math.floor((counter % minute) / second)
+          document.querySelector(".day").innerText = textDay + ' Days';
+          document.querySelector(".hour").innerText = textHour + ' Hours';
+          document.querySelector(".minute").innerText = textMinute + ' Minutes';
+          document.querySelector(".second").innerText = textSecond + ' Seconds';
+      }
+      setInterval(countDown, 1000);
+  </script>
 </html>
